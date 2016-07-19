@@ -13,6 +13,11 @@
 	"permissions": [
 		"activeTab",
 		"http://www.google.com/",
-	  "https://www.google.com/"
-	]
+		"https://www.google.com/",
+		"storage"
+	],
+	"background": {
+		"scripts": ["popup.js"],
+		"persistent": false
+	}
 }
