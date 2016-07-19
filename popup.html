@@ -1,13 +1,17 @@
 <!doctype html>
 <html>
 	<style>
-		body { width: 200px }
+		body { width: 340px; background: #DDDDDD; }
+		h2 { color: #4e4e4e; }
+		select { padding: 5px; }
 		.label { margin-bottom: 5px; }
 		button {
 			float: right;
 			margin-bottom: 10px;
 			border: none;
+			border-radius: 3px;
 			color: #FFF;
+			cursor: pointer;
 			padding: 7px 20px;
 		}
 		#enableAutoBreak {
@@ -23,20 +27,19 @@
     <script src="popup.js"></script>
   </head>
   <body>
-    <h2>Auto Break Extension</h2>
-		<div class="label">Specify Start Break:</div>
+    <h2>Auto Break Plugin</h2>
+		Start Break:&nbsp;
 		<select id="st-hour">
 		</select>
 		&nbsp;:&nbsp;
 		<select id="st-min">
 			<option>00</option>
 		</select>
-		<br><br>
-		<div class="label">Specify Break Duration:</div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration:&nbsp;
 		<select id="duration">
 			<option>00</option>
 		</select>
-		<br><br>
+		<br><br><br>
     <button id="enableAutoBreak">Enable</button>
     <button id="disableAutoBreak">Disable</button>
   </body>
