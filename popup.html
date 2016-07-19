@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<style>
+		body { width: 200px }
+		.label { margin-bottom: 5px; }
+		button {
+			float: right;
+			margin-bottom: 10px;
+			border: none;
+			color: #FFF;
+			padding: 7px 20px;
+		}
+		#enableAutoBreak {
+			background: green;
+		}
+		#disableAutoBreak {
+			display: none;
+			background: #c0392b;
+		}
+	</style>
+  <head>
+    <title>Auto Break Extension</title>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <h2>Auto Break Extension</h2>
+		<div class="label">Specify Start Break:</div>
+		<select id="st-hour">
+		</select>
+		&nbsp;:&nbsp;
+		<select id="st-min">
+			<option>00</option>
+		</select>
+		<select id="st-time">
+			<option>AM</option>
+			<option>PM</option>
+		</select>
+		<br><br>
+		<div class="label">Specify End Break:</div>
+		<select id="end-hour">
+			<option>00</option>
+		</select>
+		&nbsp;:&nbsp;
+		<select id="end-min">
+			<option>00</option>
+		</select>
+		<select id="end-time">
+			<option>AM</option>
+			<option>PM</option>
+		</select>
+		<br><br>
+    <button id="enableAutoBreak">Enable</button>
+    <button id="disableAutoBreak">Disable</button>
+  </body>
+</html>
