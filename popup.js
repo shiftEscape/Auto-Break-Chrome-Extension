@@ -39,6 +39,14 @@
 		}, 1000)
 	}
 
+	function disableControls (boolDisable) {
+		var sel = document.getElementsByTagName('select');
+		console.log(sel)
+		for(var i=0;i<sel.length;i++) {
+			sel[i].disabled = boolDisable;
+		}
+	}
+
 	function enableWatcher (bool) {
 		localStorage.setItem(WATCHER_KEY, (bool?'ENABLED':'DISABLED'));
 		if (bool) {
@@ -93,12 +101,14 @@
 	  enableAutoBreakButton.addEventListener('click', function() {
 			enableWatcher(true);
 			setButtonWatcherStatus();
+			disableControls(true);
 	  }, false);
 
 		// Disable button
 		disableAutoBreakButton.addEventListener('click', function() {
 			enableWatcher(false);
 			setButtonWatcherStatus();
+			disableControls(false);
 		}, false);
 
 	}, false);
