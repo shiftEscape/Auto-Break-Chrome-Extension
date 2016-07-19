@@ -11,6 +11,8 @@
 		"default_title": "Auto Break Plugin"
 	},
 	"permissions": [
-		"activeTab"
+		"activeTab",
+		"http://www.google.com/",
+	  "https://www.google.com/"
 	]
 }
