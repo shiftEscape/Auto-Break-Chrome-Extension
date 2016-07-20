@@ -3,16 +3,17 @@
 
 	"name": "Auto Break Plugin",
 	"description": "This extension will simulate auto-break depending on specified interval",
-	"version": "1.0",
+	"version": "1.1",
 
 	"browser_action": {
-		"default_icon": "AutoBreak.png",
+		"default_icon": "icon16.png",
 		"default_popup": "popup.html",
 		"default_title": "Auto Break Plugin"
 	},
 	"icons": {
-		"16": "AutoBreak16.png",
-		"48": "AutoBreak48.png"
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon48.png"
 	},
 	"permissions": [
 		"activeTab",
