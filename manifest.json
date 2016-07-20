@@ -6,18 +6,29 @@
 	"version": "1.0",
 
 	"browser_action": {
-		"default_icon": "icon.png",
+		"default_icon": "AutoBreak.png",
 		"default_popup": "popup.html",
 		"default_title": "Auto Break Plugin"
 	},
+	"icons": {
+		"16": "AutoBreak16.png",
+		"48": "AutoBreak48.png"
+	},
 	"permissions": [
 		"activeTab",
-		"http://www.google.com/",
-		"https://www.google.com/",
-		"storage"
+		"storage",
+		"notifications",
+		"background",
+		"http://10.10.9.19/logs/break_in",
+		"http://10.10.9.19/logs/break_out"
 	],
 	"background": {
-		"scripts": ["popup.js"],
-		"persistent": false
-	}
+		"scripts": ["background.js"]
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["popup.js"]
+		}
+	]
 }
