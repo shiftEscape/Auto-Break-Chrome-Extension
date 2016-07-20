@@ -6,7 +6,7 @@
 	var port = chrome.runtime.connect({name: "auto-break-port"});
 
 	var WATCHER_KEY = 'watcherStatus',
-			ICON_URL = './AutoBreak48.png';
+			ICON_URL = './icon128.png';
 
 	var enableAutoBreakButton = null;
 	var disableAutoBreakButton = null;

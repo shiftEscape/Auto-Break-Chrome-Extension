@@ -6,7 +6,7 @@
 
 	var breakTimer = null,
 			WATCHER_INTERVAL = 1000,
-			ICON_URL = './AutoBreak48.png',
+			ICON_URL = './icon128.png',
 			WATCHER_KEY = 'watcherStatus',
 			URL = {
 				'dev': {
