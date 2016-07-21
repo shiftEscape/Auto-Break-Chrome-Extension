@@ -2,23 +2,38 @@
 
 	var defaultBrkINURL = 'http://10.10.9.19/logs/break_in',
 			defaultBrkOUTURL = 'http://10.10.9.19/logs/break_out',
-			defaultINC = 10;
+			defaultINC = 10.
+			tINT = null;
+
+	function setMessage (msg) {
+		if(tINT) clearTimeout(tINT);
+		var status = document.getElementById('status');
+		status.textContent = msg;
+		tINT = setTimeout(function() {
+			status.textContent = '';
+		}, 750);
+	}
 
 	function save_options () {
 		var txtBrkInUrl = document.getElementById('txtBrkInUrl').value;
 		var txtBrkOutUrl = document.getElementById('txtBrkOutUrl').value;
 		var durationInc = document.getElementById('durationInc').value;
+
+		if (!txtBrkInUrl && txtBrkInUrl === '') {
+			setMessage('{ Break IN } URL cannot be empty');
+			return false;
+		} else if (!txtBrkOutUrl && txtBrkOutUrl === '') {
+			setMessage('{ Break OUT } URL cannot be empty');
+			return false;
+		}
+
 		chrome.storage.sync.set({
 			breakIN_Url: txtBrkInUrl,
 			breakOUT_Url: txtBrkOutUrl,
 			duration_INC: durationInc,
 		}, function() {
 			// Update status to let user know options were saved.
-			var status = document.getElementById('status');
-			status.textContent = 'Options saved!'
-			setTimeout(function() {
-				status.textContent = '';
-			}, 1000);
+			setMessage('Options saved!');
 		});
 	}
 
