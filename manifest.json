@@ -32,5 +32,5 @@
 			"js": ["popup.js"]
 		}
 	],
-	"options_page": "options.html
+	"options_page": "options.html"
 }
