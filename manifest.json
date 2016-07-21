@@ -31,5 +31,6 @@
 			"matches": ["http://*/*", "https://*/*"],
 			"js": ["popup.js"]
 		}
-	]
+	],
+	"options_page": "options.html
 }
